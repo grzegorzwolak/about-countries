@@ -1,5 +1,6 @@
 const input = document.querySelector('.input');
 const countriesBox = document.querySelector('.wrapper');
+const backBtn = document.querySelector('.go-search')
 let allCountries
 
 
@@ -92,7 +93,16 @@ const showCountry = (input) => {
 	});
 }
 
+const showBackBtn = () => {
+	if (window.scrollY > 800) {
+		backBtn.classList.remove('hide');
+	} else {
+		backBtn.classList.add('hide');
+	}
+}
 
 
+
+window.addEventListener('scroll', showBackBtn)
 window.addEventListener('onload', handleCountries());
 input.addEventListener('keyup', searchCountry);
