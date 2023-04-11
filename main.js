@@ -78,6 +78,7 @@ const createCountry = () => {
 const searchCountry = () => {
 	const typedText = input.value.toUpperCase()
 	showCountry(typedText)
+	
 };
 
 const showCountry = (input) => {
